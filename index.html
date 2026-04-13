@@ -48,9 +48,10 @@
     .hero-content { position: relative; z-index: 1; max-width: 600px; text-align: center; }
     .hero-greeting { color: var(--teal-light); font-size: 0.85rem; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 16px; display: flex; align-items: center; justify-content: center; gap: 10px; }
     .hero-greeting::before { content: ''; display: inline-block; width: 32px; height: 2px; background: var(--teal-light); border-radius: 2px; }
-    .hero-content h1 { font-size: clamp(2.8rem, 6vw, 4.8rem); font-weight: 800; background: linear-gradient(135deg, #fff 0%, var(--purple-light) 60%, var(--teal-light) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.05; margin-bottom: 14px; }
+    .hero-content h1 { font-size: clamp(1.8rem, 5vw, 4.8rem); font-weight: 800; background: linear-gradient(135deg, #fff 0%, var(--purple-light) 60%, var(--teal-light) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.05; margin-bottom: 14px; white-space: nowrap; }
     .hero-content h2 { font-size: clamp(1rem, 2.5vw, 1.4rem); font-weight: 400; color: rgba(255,255,255,0.45); margin-bottom: 20px; letter-spacing: 0.5px; }
-    .hero-sub { color: rgba(255,255,255,0.55); font-size: 0.93rem; margin-bottom: 36px; max-width: 480px; line-height: 1.8; text-align: center; }
+    .hero-sub { color: rgba(255,255,255,0.55); font-size: 0.93rem; margin-bottom: 36px; line-height: 2; text-align: center; }
+    .hero-sub span { white-space: nowrap; display: block; }
     .hero-links { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 24px; }
     .btn-primary { background: var(--purple); color: var(--white); padding: 12px 24px; border-radius: 8px; font-weight: 600; font-size: 0.9rem; transition: background 0.2s, transform 0.2s; display: inline-flex; align-items: center; gap: 8px; }
     .btn-primary:hover { background: var(--purple-dark); transform: translateY(-2px); }
@@ -151,7 +152,7 @@
       <p class="hero-greeting">Hi, I'm</p>
       <h1>Harikrishnan K</h1>
       <h2>Software Engineer</h2>
-      <p class="hero-sub">Building scalable microservices &amp; IAM systems · React.js · Java · Spring Boot · AWS</p>
+      <p class="hero-sub"><span>Building scalable microservices &amp; IAM systems</span><span>React.js · Java · Spring Boot · AWS</span></p>
       <div class="hero-links">
         <a href="mailto:harikdas.dev@gmail.com" class="btn-primary"><i class="fa fa-envelope"></i> Get in Touch</a>
         <a href="https://github.com/hari-h-k-k" target="_blank" class="btn-outline"><i class="fab fa-github"></i> GitHub</a>
@@ -186,7 +187,7 @@
           <div class="skill-icon"><i class="fa fa-server"></i></div>
           <h3>Backend</h3>
           <div class="tags">
-            <span>Java</span><span>Spring Boot</span><span>REST APIs</span><span>Microservices</span><span>IAM</span><span>JSON</span>
+            <span>Java</span><span>Spring Boot</span><span>REST APIs</span><span>Microservices</span><span>IAM</span>
           </div>
         </div>
         <div class="skill-card">
@@ -200,7 +201,7 @@
           <div class="skill-icon"><i class="fa fa-database"></i></div>
           <h3>Databases</h3>
           <div class="tags">
-            <span>PostgreSQL</span><span>MongoDB</span><span>SQL</span><span>NoSQL</span>
+            <span>PostgreSQL</span><span>MongoDB</span>
           </div>
         </div>
         <div class="skill-card">
