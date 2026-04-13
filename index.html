@@ -4,8 +4,94 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Harikrishnan K — Backend Engineer</title>
-  <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    :root {
+      --purple: #7c3aed;
+      --purple-light: #a78bfa;
+      --purple-dark: #4c1d95;
+      --purple-bg: #f5f3ff;
+      --purple-card: #ede9fe;
+      --text: #1e1b2e;
+      --text-muted: #6b7280;
+      --white: #ffffff;
+      --bg: #fafafa;
+      --border: #e5e7eb;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+    a { text-decoration: none; color: inherit; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 16px 48px; background: rgba(255,255,255,0.85); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); }
+    .nav-logo { font-weight: 700; font-size: 1.2rem; color: var(--purple); background: var(--purple-card); padding: 6px 12px; border-radius: 8px; }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { font-size: 0.9rem; font-weight: 500; color: var(--text-muted); transition: color 0.2s; }
+    .nav-links a:hover { color: var(--purple); }
+    #hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #1e1b2e 0%, #3b1f6e 50%, #7c3aed 100%); position: relative; overflow: hidden; padding: 100px 24px 60px; text-align: center; }
+    .hero-blob { position: absolute; width: 600px; height: 600px; background: radial-gradient(circle, rgba(167,139,250,0.2) 0%, transparent 70%); top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none; }
+    .hero-content { position: relative; z-index: 1; }
+    .hero-greeting { color: var(--purple-light); font-size: 1rem; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; }
+    .hero-content h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 700; color: var(--white); line-height: 1.1; margin-bottom: 12px; }
+    .hero-content h2 { font-size: clamp(1.1rem, 3vw, 1.6rem); font-weight: 400; color: var(--purple-light); margin-bottom: 16px; }
+    .hero-sub { color: rgba(255,255,255,0.65); font-size: 0.95rem; margin-bottom: 32px; max-width: 500px; margin-left: auto; margin-right: auto; }
+    .hero-links { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 24px; }
+    .btn-primary { background: var(--purple); color: var(--white); padding: 12px 24px; border-radius: 8px; font-weight: 600; font-size: 0.9rem; transition: background 0.2s, transform 0.2s; display: inline-flex; align-items: center; gap: 8px; }
+    .btn-primary:hover { background: var(--purple-dark); transform: translateY(-2px); }
+    .btn-outline { border: 1.5px solid rgba(255,255,255,0.4); color: var(--white); padding: 12px 24px; border-radius: 8px; font-weight: 500; font-size: 0.9rem; transition: border-color 0.2s, background 0.2s, transform 0.2s; display: inline-flex; align-items: center; gap: 8px; }
+    .btn-outline:hover { border-color: var(--purple-light); background: rgba(124,58,237,0.15); transform: translateY(-2px); }
+    .btn-outline.sm { border-color: var(--purple); color: var(--purple); padding: 8px 16px; font-size: 0.85rem; }
+    .btn-outline.sm:hover { background: var(--purple-card); transform: none; }
+    .hero-location { color: rgba(255,255,255,0.5); font-size: 0.85rem; }
+    section { padding: 80px 24px; }
+    section:nth-child(even) { background: var(--purple-bg); }
+    .container { max-width: 900px; margin: 0 auto; }
+    .section-title { font-size: 1.8rem; font-weight: 700; color: var(--purple-dark); margin-bottom: 36px; position: relative; display: inline-block; }
+    .section-title::after { content: ''; display: block; width: 48px; height: 4px; background: var(--purple); border-radius: 2px; margin-top: 8px; }
+    .about-card { background: var(--white); border-radius: 16px; padding: 32px; border-left: 4px solid var(--purple); box-shadow: 0 4px 24px rgba(124,58,237,0.08); display: flex; flex-direction: column; gap: 12px; font-size: 0.97rem; }
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+    .skill-card { background: var(--white); border-radius: 16px; padding: 24px; box-shadow: 0 2px 16px rgba(124,58,237,0.07); transition: transform 0.2s, box-shadow 0.2s; }
+    .skill-card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(124,58,237,0.15); }
+    .skill-icon { width: 44px; height: 44px; background: var(--purple-card); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--purple); font-size: 1.2rem; margin-bottom: 12px; }
+    .skill-card h3 { font-size: 0.95rem; font-weight: 600; margin-bottom: 12px; color: var(--purple-dark); }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tags span { background: var(--purple-card); color: var(--purple-dark); font-size: 0.78rem; font-weight: 500; padding: 4px 10px; border-radius: 20px; }
+    .timeline { position: relative; padding-left: 28px; }
+    .timeline::before { content: ''; position: absolute; left: 7px; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, var(--purple), var(--purple-light)); border-radius: 2px; }
+    .timeline-item { position: relative; margin-bottom: 32px; }
+    .timeline-dot { position: absolute; left: -25px; top: 20px; width: 14px; height: 14px; background: var(--purple); border-radius: 50%; border: 3px solid var(--white); box-shadow: 0 0 0 2px var(--purple); }
+    .timeline-card { background: var(--white); border-radius: 16px; padding: 28px; box-shadow: 0 2px 16px rgba(124,58,237,0.07); transition: box-shadow 0.2s; }
+    .timeline-card:hover { box-shadow: 0 6px 28px rgba(124,58,237,0.14); }
+    .tcard-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; }
+    .tcard-header h3 { font-size: 1.05rem; font-weight: 700; color: var(--purple-dark); }
+    .role { font-size: 0.88rem; color: var(--text-muted); margin-top: 2px; }
+    .date-badge { background: var(--purple-card); color: var(--purple); font-size: 0.8rem; font-weight: 600; padding: 4px 12px; border-radius: 20px; white-space: nowrap; }
+    .timeline-card ul, .project-card ul { padding-left: 18px; font-size: 0.92rem; color: #374151; }
+    .timeline-card ul li, .project-card ul li { margin-bottom: 6px; }
+    .project-card { background: var(--white); border-radius: 16px; padding: 28px; box-shadow: 0 2px 16px rgba(124,58,237,0.07); }
+    .project-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 14px; }
+    .project-header h3 { font-size: 1.1rem; font-weight: 700; color: var(--purple-dark); }
+    .project-card .tags { margin-bottom: 16px; }
+    .edu-card { background: var(--white); border-radius: 16px; padding: 28px; box-shadow: 0 2px 16px rgba(124,58,237,0.07); border-left: 4px solid var(--purple); }
+    .coursework { font-size: 0.85rem; color: var(--text-muted); margin-top: 6px; }
+    .cert-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+    .cert-card { background: var(--white); border-radius: 16px; padding: 24px; display: flex; align-items: center; gap: 14px; box-shadow: 0 2px 16px rgba(124,58,237,0.07); border: 1.5px solid transparent; transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s; font-size: 0.9rem; font-weight: 500; color: var(--text); }
+    .cert-card:hover { border-color: var(--purple); transform: translateY(-3px); box-shadow: 0 8px 28px rgba(124,58,237,0.15); }
+    .cert-card > i:first-child { font-size: 1.6rem; color: var(--purple); flex-shrink: 0; }
+    .cert-card span { flex: 1; }
+    .sm-icon { font-size: 0.7rem; color: var(--text-muted); }
+    footer { background: #1e1b2e; color: rgba(255,255,255,0.5); text-align: center; padding: 32px 24px; font-size: 0.85rem; }
+    .footer-links { display: flex; justify-content: center; gap: 20px; margin-bottom: 12px; }
+    .footer-links a { color: rgba(255,255,255,0.5); font-size: 1.2rem; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--purple-light); }
+    @media (max-width: 640px) {
+      nav { padding: 14px 20px; }
+      .nav-links { gap: 16px; }
+      .nav-links a { font-size: 0.82rem; }
+      section { padding: 60px 16px; }
+      .tcard-header { flex-direction: column; }
+      .project-header { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
