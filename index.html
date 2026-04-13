@@ -1,10 +1,125 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Portfolio</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harikrishnan K — Developer Profile</title>
+  <link rel="stylesheet" href="Style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-  
+
+  <header>
+    <h1>Harikrishnan K</h1>
+    <div class="contact">
+      <a href="tel:9645215125"><i class="fa fa-phone"></i> +91 9645215125</a>
+      <a href="mailto:harikdas.dev@gmail.com"><i class="fa fa-envelope"></i> harikdas.dev@gmail.com</a>
+      <a href="https://www.linkedin.com/in/harikrishnan-k-6176161b6/" target="_blank"><i class="fab fa-linkedin"></i> Harikrishnan K</a>
+      <a href="https://github.com/hari-h-k-k" target="_blank"><i class="fab fa-github"></i> github.com/hari-h-k-k</a>
+      <span><i class="fa fa-map-marker-alt"></i> Bengaluru</span>
+    </div>
+  </header>
+
+  <main>
+
+    <section id="summary">
+      <h2>Summary</h2>
+      <p>
+        Backend Software Engineer with <strong>2+ years</strong> of experience building <strong>scalable microservices</strong> using <strong>Java</strong> and <strong>Spring Boot</strong>. Currently developing <strong>IAM and account management systems</strong> for large-scale <strong>B2B and B2C platforms</strong>. Strong in <strong>debugging</strong>, <strong>log analysis</strong>, and <strong>performance optimization</strong>. Experienced with <strong>REST APIs</strong>, <strong>AWS (CloudFront, Route 53)</strong>, and <strong>CI/CD</strong> using <strong>Argo CD</strong>, with working knowledge of <strong>Datadog</strong>. Proficient in <strong>PostgreSQL</strong>, <strong>MongoDB</strong>, and <strong>object-oriented design</strong>.
+      </p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li><strong>Frontend:</strong> React.js, JavaScript, TypeScript, HTML, CSS</li>
+        <li><strong>Backend:</strong> Java, Spring Boot, REST APIs, Microservices, IAM Concepts, Web Services, JSON</li>
+        <li><strong>Tools &amp; Practices:</strong> Code Reviews, Debugging, Log Analysis, Performance Tuning, Git</li>
+        <li><strong>Databases:</strong> PostgreSQL, MongoDB, SQL, NoSQL</li>
+        <li><strong>Cloud &amp; DevOps:</strong> AWS (CloudFront, Route 53, S3), Argo CD, Datadog, Docker, Linux</li>
+        <li><strong>Design:</strong> Object-Oriented Programming, Design Patterns, System Design, MVC Architecture</li>
+      </ul>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+
+      <div class="job">
+        <div class="job-header">
+          <span class="job-company">Samsung R&amp;D Institute — Bangalore</span>
+          <span class="job-date">Nov 2023 – Present</span>
+        </div>
+        <div class="job-title">Engineer · India</div>
+        <ul>
+          <li>Owned and enhanced <strong>account services</strong> for <strong>B2B and B2C users</strong>, improving scalability, reliability, and security of the Samsung Accounts platform.</li>
+          <li>Designed and implemented backend services using <strong>Spring Boot (Java)</strong> for <strong>IAM</strong> and <strong>Business Account Management</strong>, handling authentication, authorization, and account lifecycle flows.</li>
+          <li>Built and optimized <strong>secure login and onboarding workflows</strong>, improving success rates and overall user experience.</li>
+          <li>Developed <strong>React.js</strong> components for internal account dashboards, enabling efficient account management and monitoring.</li>
+          <li>Leveraged <strong>AWS CloudFront</strong> and <strong>Route 53</strong> to improve content delivery performance and system availability.</li>
+          <li>Managed <strong>CI/CD pipelines</strong> using <strong>Argo CD</strong> and used <strong>Datadog</strong> for monitoring, alerting, and incident resolution.</li>
+          <li>Drove <strong>debugging, log analysis, and performance tuning</strong>, identifying bottlenecks and improving API response times.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <span class="job-company">Storilabs System Technologies</span>
+          <span class="job-date">Jan 2021 – Jun 2021</span>
+        </div>
+        <div class="job-title">Software Developer Intern · Calicut, India</div>
+        <ul>
+          <li>Developed frontend components for a <strong>B2B e-commerce platform</strong> using <strong>React.js and Redux</strong>.</li>
+          <li>Built <strong>RESTful web services</strong> using <strong>Python</strong> and <strong>Flask</strong> with <strong>JSON</strong> and <strong>XML</strong> payloads to manage product and order data.</li>
+          <li>Designed MongoDB schemas and optimized queries for catalog and inventory data.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="job">
+        <div class="job-header">
+          <span class="job-company">National Institute of Technology Calicut</span>
+          <span class="job-date">2019 – 2023</span>
+        </div>
+        <div class="job-title">B.Tech in Electronics and Communications · CGPA: 8.35</div>
+        <p class="coursework"><strong>Relevant Coursework:</strong> Data Structures &amp; Algorithms, Computer Architecture, AI, Microprocessors</p>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="job">
+        <div class="job-header">
+          <span class="job-company">
+            Distributed Auction Platform
+            <a href="https://github.com/hari-h-k-k/last-call" target="_blank"><i class="fab fa-github"></i></a>
+          </span>
+        </div>
+        <div class="job-title">React.js, Java, Spring Boot, Kafka, PostgreSQL, Microservices, WebSocket</div>
+        <ul>
+          <li>Built a real-time auction platform using <strong>Spring Boot microservices</strong> with <strong>Java</strong>, <strong>PostgreSQL</strong>, and <strong>Kafka</strong> following <strong>SOA</strong> principles.</li>
+          <li>Implemented <strong>JWT authentication</strong> and <strong>WebSocket-based live updates</strong> for secure, low-latency user interactions.</li>
+          <li>Containerized services using <strong>Docker</strong> and orchestrated deployments for scalable, production-ready environments.</li>
+          <li>Automated scheduled auction execution using <strong>Quartz Scheduler</strong> for reliable time-based job processing.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="certifications">
+      <h2>Certifications</h2>
+      <ul class="cert-list">
+        <li><a href="https://www.credly.com/badges/9cadd374-3da2-4928-8434-7836af04ebc3/public_url" target="_blank">AWS Cloud Quest: Cloud Practitioner <i class="fa fa-external-link-alt"></i></a></li>
+        <li><a href="https://www.credly.com/badges/5521d510-143d-4d2c-9856-04bf41cc6013/public_url" target="_blank">AWS Cloud Quest: Generative AI Practitioner <i class="fa fa-external-link-alt"></i></a></li>
+        <li><a href="https://drive.google.com/drive/folders/1_jSksF7cNmGz9DyS7zXtRsasELj4a1xS?usp=drive_link" target="_blank">Google Project Management <i class="fa fa-external-link-alt"></i></a></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Harikrishnan K</p>
+  </footer>
+
 </body>
 </html>

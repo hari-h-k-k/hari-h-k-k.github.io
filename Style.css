@@ -1,90 +1,156 @@
-/* Reset default browser styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Set background and text colors */
-  body {
-    background-color: #f5f5f5;
-    color: #333;
-    font-family: Arial, sans-serif;
-  }
-  
-  /* Header styles */
-  header {
-    background-color: #333;
-    padding: 20px;
-  }
-  
-  header h1 {
-    color: #fff;
-    font-size: 24px;
-  }
-  
-  nav ul {
-    list-style-type: none;
-    margin-top: 10px;
-  }
-  
-  nav ul li {
-    display: inline;
-    margin-right: 10px;
-  }
-  
-  nav ul li a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  /* Main section styles */
-  section {
-    padding: 40px;
-  }
-  
-  section h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  /* Project section styles */
-  .project {
-    margin-bottom: 20px;
-  }
-  
-  .project h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  /* Contact section styles */
-  form label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  form input[type="text"],
-  form input[type="email"],
-  form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-  }
-  
-  form input[type="submit"] {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
-  
-  /* Footer styles */
-  footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Charter', Georgia, serif;
+  background: #f9f9f9;
+  color: #222;
+  line-height: 1.6;
+}
+
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header {
+  background: #111;
+  color: #fff;
+  padding: 32px 48px;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 0.9rem;
+}
+
+.contact a,
+.contact span {
+  color: #ccc;
+}
+
+.contact a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.contact i {
+  margin-right: 4px;
+}
+
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 24px;
+}
+
+section {
+  margin-bottom: 36px;
+}
+
+section h2 {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #222;
+  padding-bottom: 4px;
+  margin-bottom: 16px;
+}
+
+#summary p {
+  font-size: 0.95rem;
+}
+
+.skills-list {
+  list-style: none;
+  font-size: 0.92rem;
+}
+
+.skills-list li {
+  margin-bottom: 4px;
+}
+
+.job {
+  margin-bottom: 20px;
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.job-company {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.job-company a {
+  margin-left: 6px;
+  font-size: 0.9rem;
+}
+
+.job-date {
+  font-size: 0.88rem;
+  color: #555;
+}
+
+.job-title {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 6px;
+}
+
+.job ul {
+  padding-left: 20px;
+  font-size: 0.92rem;
+}
+
+.job ul li {
+  margin-bottom: 4px;
+}
+
+.coursework {
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+.cert-list {
+  list-style: none;
+  font-size: 0.92rem;
+}
+
+.cert-list li {
+  margin-bottom: 6px;
+}
+
+.cert-list i {
+  font-size: 0.75rem;
+  margin-left: 4px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.85rem;
+  color: #888;
+  border-top: 1px solid #ddd;
+  margin-top: 40px;
+}
